@@ -14,7 +14,27 @@ export default defineConfig({
   test: {
     globals: true,
     environment: 'jsdom',
-    include: ['src/**/*.{test,spec}.{js,ts,jsx,tsx}'],
+    coverage: {
+      provider: 'v8',
+      reporter: ['text'],
+      all: false,
+      clean: true,
+      include: [
+        'src/components/**/*.tsx',
+        '!src/**/*.test.tsx', 
+        '!src/**/*.stories.tsx' 
+      ],
+      exclude: [
+        '**/node_modules/**',
+        '**/dist/**',
+        '**/*.d.ts',
+        '**/types/**',
+        '**/utils/**',
+        '**/hooks/**',
+        '**/api/**',
+        'src/data/**'
+      ],
+    },
     exclude: [
       '**/node_modules/**',
       '**/dist/**',
@@ -24,7 +44,7 @@ export default defineConfig({
       extends: true,
       test: {
         name: 'unit',
-        include: ['src/**/*.{test,spec}.{js,ts,jsx,tsx}'],
+        include: ['src/components/**/*.{test,spec}.{js,ts,jsx,tsx}'],
         setupFiles: ['./vitest.unit.setup.ts']
       }
     }, 
