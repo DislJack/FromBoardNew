@@ -8,7 +8,7 @@ type TGaranteeCard = {
 function GaranteeCard({src, caption}: TGaranteeCard) {
   return (
     <figure className={styles.container}>
-      <img className={styles.image} src={src} alt={caption} />
+      <img className={styles.image} src={src} alt={caption} data-testid='garantee'/>
       <figcaption className={styles.caption}>{caption}</figcaption>
     </figure>
   )
