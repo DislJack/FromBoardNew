@@ -1,0 +1,25 @@
+.button {
+  padding: 0.625rem 1.75rem;
+  font-family: 'Formular', 'Arial', sans-serif;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  font-weight: 700;
+  color: #F9FAFB;
+  background-color: #8B5CF6;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.form_button {
+  width: 100%;
+}
+
+.button:hover {
+  background-color: #A78BFA;
+}
+
+.button:disabled {
+  background-color: #DDD6FE
+}
