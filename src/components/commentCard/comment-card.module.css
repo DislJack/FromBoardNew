@@ -1,0 +1,78 @@
+.container {
+  background-color: #F9FAFB;
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: column-reverse;
+  gap: 1.875rem;
+  padding: 2rem 2.75rem;
+  position: relative;
+}
+
+.container::before {
+  content: '';
+  width: 62.5px;
+  height: 43.75px;
+  background-image: url('../../assets/commaIcon.svg');
+  background-size: contain;
+  position: absolute;
+  right: 1.125rem;
+  bottom: 2.5rem;
+}
+
+.heading {
+  margin: 0;
+  color: #6B7280;
+  font-family: 'Formular', 'Arial', sans-serif;
+  font-size: 1.5rem;
+  line-height: 2rem;
+  font-weight: 300;
+}
+
+.text {
+  margin: 0;
+  color: #111827;
+  font-family: 'Formular', 'Arial', sans-serif;
+  font-size: 1.5rem;
+  line-height: 2rem;
+  font-weight: 700;
+}
+
+@media (max-width: 1536px) {
+  .container {
+    padding: 1rem;
+    gap: 1.5rem;
+  }
+
+  .container::before {
+    right: 23px;
+    bottom: 3px;
+  }
+
+  .heading {
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+  }
+
+  .text {
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
+}
+
+@media (max-width: 1024px) {
+  .container {
+    padding: 2rem 1rem;
+  }
+
+  .container::before {
+    right: 16px;
+    bottom: 8px;
+  }
+}
+
+@media (max-width: 768px) {
+  .container::before {
+    right: 20px;
+    bottom: 16px;
+  }
+}
